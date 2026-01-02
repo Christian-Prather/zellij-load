@@ -3985,7 +3985,7 @@ dependencies = [
 
 [[package]]
 name = "zellij-load"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "clap 4.5.53",
  "colored 3.0.0",
