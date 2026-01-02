@@ -9,7 +9,7 @@ build-daemon:
 
 [group("build")]
 build-wasm:
-    cargo build --target wasm32-wasip1 --release --bin plugin --features plugin
+    cargo build --target wasm32-wasip1 --release --bin zellij-load-plugin --features plugin
 
 [group("run")]
 run-daemon:
@@ -17,13 +17,13 @@ run-daemon:
 
 [group("run")]
 run-debug:
-    cargo build --target wasm32-wasip1 --bin plugin --features plugin
-    zellij action start-or-reload-plugin file:target/wasm32-wasip1/debug/plugin.wasm
+    cargo build --target wasm32-wasip1 --bin zellij-load-plugin --features plugin
+    zellij action start-or-reload-plugin file:target/wasm32-wasip1/debug/zellij-load-plugin.wasm
 
 [group("run")]
 run:
     just build-all
-    zellij action start-or-reload-plugin file:target/wasm32-wasip1/release/plugin.wasm
+    zellij action start-or-reload-plugin file:target/wasm32-wasip1/release/zellij-load-plugin.wasm
 
 [group("install")]
 install:

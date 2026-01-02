@@ -64,7 +64,7 @@ just uninstall
                plugin location="status-bar"
            }
            pane size="35%" borderless=true {
-               plugin location="file:/path/to/zellij-load/target/wasm32-wasip1/release/plugin.wasm"
+               plugin location="file:/path/to/zellij-load/target/wasm32-wasip1/release/zellij-load-plugin.wasm"
            }
       }
    }
@@ -123,7 +123,7 @@ The native daemon (`zellij-system-monitor`) is responsible for:
 
 #### Plugin (WebAssembly Component)
 
-The plugin (`plugin.wasm`) is responsible for:
+The plugin (`zellij-load-plugin.wasm`) is responsible for:
 - Receiving system data from the daemon
 - Rendering the information in the Zellij status bar
 - Managing permissions and lifecycle

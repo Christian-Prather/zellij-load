@@ -32,7 +32,7 @@ native = ["clap", "sysinfo", "tokio", "single-instance", "gfxinfo", "glob"]
 plugin = ["zellij-tile", "colored", "regex"]
 
 [[bin]]
-name = "plugin"
+name = "zellij-load-plugin"
 path = "src/bin/plugin.rs"
 required-features = ["plugin"]
 
