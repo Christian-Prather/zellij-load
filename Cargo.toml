@@ -4,6 +4,11 @@ version = "0.1.0"
 authors = ["Christian Prather"]
 edition = "2024"
 
+[profile.release]
+opt-level = "s"
+lto = "fat"
+codegen-units = 1
+
 [dependencies]
 # Plugin dependencies
 zellij-tile = {version = "0.43.1", optional = true}
