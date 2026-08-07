@@ -23,8 +23,9 @@ jobs:
         targets: wasm32-wasip1
     
     - name: Install cargo-nextest
-      run: |
-        cargo install cargo-nextest --locked
+      uses: taiki-e/install-action@v2
+      with:
+        tool: cargo-nextest
     
     - name: Install just
       uses: extractions/setup-just@v4
