@@ -55,6 +55,9 @@ impl ZellijPlugin for State {
             Event::PermissionRequestResult(status) => match status {
                 PermissionStatus::Granted => {
                     eprintln!("Permission granted");
+                    // Unselectable pane lets the tab close when the last shell pane exits
+                    // but can't answer the permission prompt
+                    set_selectable(false);
                     let _ = File::create(&self.lock_path);
                     let current_dir = std::path::PathBuf::from(".");
 
