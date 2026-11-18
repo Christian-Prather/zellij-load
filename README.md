@@ -236,6 +236,7 @@ Before submitting a PR, please ensure:
 2. **GPU Not Detected**: Verify GPU drivers are properly installed and support querying statistics (currently only tested with NVIDIA GPUs)
 3. **Plugin Not Loading**: Check the path in your Zellij configuration is correct
 4. **Metrics Frozen**: If the display stops updating, the daemon may have exited — reloading the plugin will respawn it
+5. **`exit` Hangs the Session**: On first run, the plugin pane stays selectable until you answer the permission prompt. Until then, closing the last terminal pane leaves the session open. Zellij caches the grant, so this only happens once per plugin path
 
 ### Debugging
 
